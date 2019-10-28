@@ -1,5 +1,5 @@
 #include <stdexcept>
-#include <SN74141.h>
+#include "SN74141.h"
 
 using namespace NixieTubeLib;
 

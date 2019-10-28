@@ -1,5 +1,5 @@
-#ifndef NIXIE_TUBE_SN74141_h
-#define NIXIE_TUBE_SN74141_h
+#ifndef NIXIE_TUBE_SN74141_H
+#define NIXIE_TUBE_SN74141_H
 
 #include <Arduino.h>
 
