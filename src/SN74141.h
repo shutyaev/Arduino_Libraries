@@ -5,10 +5,17 @@
 
 namespace NixieTubeLib
 {
+struct SN74141Pins
+{
+    uint8_t a;
+    uint8_t b;
+    uint8_t c;
+    uint8_t d;
+};
 class SN74141
 {
 private:
-    const uint8_t FUNCTION_TABLE[11][4] = {
+    const uint8_t kFunctionTable[11][4] = {
         {LOW, LOW, LOW, LOW},    // 0
         {HIGH, LOW, LOW, LOW},   // 1
         {LOW, HIGH, LOW, LOW},   // 2
@@ -21,14 +28,11 @@ private:
         {HIGH, LOW, LOW, HIGH},  // 9
         {HIGH, HIGH, HIGH, HIGH} // NONE
     };
-    uint8_t a_;
-    uint8_t b_;
-    uint8_t c_;
-    uint8_t d_;
+    SN74141Pins pins_;
     void output(uint8_t out);
 
 public:
-    SN74141(uint8_t a, uint8_t b, uint8_t c, uint8_t d);
+    SN74141(SN74141Pins pins);
     void outputOn0();
     void outputOn1();
     void outputOn2();
