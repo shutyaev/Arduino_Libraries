@@ -6,24 +6,10 @@
 
 namespace NixieTubeLib
 {
-struct IN19APins
-{
-    uint8_t pct;
-    uint8_t m_majuscule;
-    uint8_t p;
-    uint8_t m_minuscule;
-    uint8_t k;
-    uint8_t n;
-    uint8_t mu;
-    uint8_t deg_c;
-};
 class IN19A : public NixieTube
 {
-private:
-    IN19APins pins_;
-
 public:
-    IN19A(SN74141 *driver, IN19APins pins);
+    IN19A(SN74141 *driver, uint8_t *pins);
     ShowResult showPercent();
     ShowResult showM_Majuscule();
     ShowResult showP();

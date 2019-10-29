@@ -20,7 +20,8 @@ public:
 
 protected:
     static const uint8_t kPinNone = -1;
-    NixieTube(SN74141 *driver);
+    const uint8_t *pins_;
+    NixieTube(SN74141 *driver, const uint8_t *pins);
     ShowResult show(uint8_t pin);
 
 private:

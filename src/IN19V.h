@@ -6,24 +6,10 @@
 
 namespace NixieTubeLib
 {
-struct IN19VPins
-{
-    uint8_t pi;
-    uint8_t a_b;
-    uint8_t tilde;
-    uint8_t less_than;
-    uint8_t minus;
-    uint8_t greater_than;
-    uint8_t plus;
-    uint8_t db;
-};
 class IN19V : public NixieTube
 {
-private:
-    IN19VPins pins_;
-
 public:
-    IN19V(SN74141 *driver, IN19VPins pins);
+    IN19V(SN74141 *driver, uint8_t *pins);
     ShowResult showPi();
     ShowResult showA_B();
     ShowResult showTilde();

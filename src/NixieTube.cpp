@@ -2,9 +2,10 @@
 
 using namespace NixieTubeLib;
 
-NixieTube::NixieTube(SN74141 *driver)
+NixieTube::NixieTube(SN74141 *driver, const uint8_t *pins)
 {
     driver_ = driver;
+    pins_ = pins;
 }
 
 NixieTube::ShowResult NixieTube::show(uint8_t pin)
