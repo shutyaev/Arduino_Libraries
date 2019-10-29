@@ -17,11 +17,13 @@ public:
         OUT_OF_RANGE
     };
     void turnOff();
+    void train(unsigned long duration);
 
 protected:
     static const uint8_t kPinNone = -1;
     const uint8_t *pins_;
-    NixieTube(SN74141 *driver, const uint8_t *pins);
+    uint8_t pinCount_;
+    NixieTube(SN74141 *driver, const uint8_t *pins, uint8_t pinCount);
     ShowResult show(uint8_t pin);
 
 private:

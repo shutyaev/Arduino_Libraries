@@ -16,80 +16,80 @@ const uint8_t SN74141::kFunctionTable[11][4] = {
     {HIGH, HIGH, HIGH, HIGH} // NONE
 };
 
-SN74141::SN74141(SN74141Pins pins)
+SN74141::SN74141(const uint8_t *pins)
 {
     pins_ = pins;
 }
 
-void SN74141::output(uint8_t out)
+void SN74141::output(uint8_t pin)
 {
-    digitalWrite(pins_.a, kFunctionTable[out][0]);
-    digitalWrite(pins_.b, kFunctionTable[out][1]);
-    digitalWrite(pins_.c, kFunctionTable[out][2]);
-    digitalWrite(pins_.d, kFunctionTable[out][3]);
+    digitalWrite(pins_[I_A], kFunctionTable[pin][I_A]);
+    digitalWrite(pins_[I_B], kFunctionTable[pin][I_B]);
+    digitalWrite(pins_[I_C], kFunctionTable[pin][I_C]);
+    digitalWrite(pins_[I_D], kFunctionTable[pin][I_D]);
 }
 
 void SN74141::outputOn0()
 {
-    output(0);
+    output(O0);
 }
 
 void SN74141::outputOn1()
 {
-    output(1);
+    output(O1);
 }
 
 void SN74141::outputOn2()
 {
-    output(2);
+    output(O2);
 }
 
 void SN74141::outputOn3()
 {
-    output(3);
+    output(O3);
 }
 
 void SN74141::outputOn4()
 {
-    output(4);
+    output(O4);
 }
 
 void SN74141::outputOn5()
 {
-    output(5);
+    output(O5);
 }
 
 void SN74141::outputOn6()
 {
-    output(6);
+    output(O6);
 }
 
 void SN74141::outputOn7()
 {
-    output(7);
+    output(O7);
 }
 
 void SN74141::outputOn8()
 {
-    output(8);
+    output(O8);
 }
 
 void SN74141::outputOn9()
 {
-    output(9);
+    output(O9);
 }
 
 void SN74141::outputOnNone()
 {
-    output(10);
+    output(O_NONE);
 }
 
-SN74141::OutputOnResult SN74141::outputOn(uint8_t out)
+SN74141::OutputOnResult SN74141::outputOn(uint8_t pin)
 {
-    if (out < 0 || out > 9)
+    if (pin < O0 || pin > O9)
     {
         return OUT_OF_RANGE;
     }
-    output(out);
+    output(pin);
     return SUCCESS;
 }
