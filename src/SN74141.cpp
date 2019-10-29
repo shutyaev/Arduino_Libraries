@@ -1,4 +1,3 @@
-#include <stdexcept>
 #include "SN74141.h"
 
 using namespace NixieTubeLib;
@@ -71,11 +70,12 @@ void SN74141::outputOnNone()
     output(10);
 }
 
-void SN74141::outputOn(uint8_t out)
+bool SN74141::outputOn(uint8_t out)
 {
     if (out < 0 || out > 9)
     {
-        throw std::out_of_range("out must be in [0; 9] range");
+        return false; // out of range
     }
     output(out);
+    return true;
 }

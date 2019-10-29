@@ -7,42 +7,42 @@ IN19A::IN19A(SN74141 *driver, IN19APins pins) : NixieTube::NixieTube(driver)
     pins_ = pins;
 }
 
-void IN19A::showPercent()
+bool IN19A::showPercent()
 {
-    show(pins_.pct);
+    return show(pins_.pct);
 }
 
-void IN19A::showM_Majuscule()
+bool IN19A::showM_Majuscule()
 {
-    show(pins_.m_majuscule);
+    return show(pins_.m_majuscule);
 }
 
-void IN19A::showP()
+bool IN19A::showP()
 {
-    show(pins_.p);
+    return show(pins_.p);
 }
 
-void IN19A::showM_Minuscule()
+bool IN19A::showM_Minuscule()
 {
-    show(pins_.m_minuscule);
+    return show(pins_.m_minuscule);
 }
 
-void IN19A::showK()
+bool IN19A::showK()
 {
-    show(pins_.k);
+    return show(pins_.k);
 }
 
-void IN19A::showN()
+bool IN19A::showN()
 {
-    show(pins_.n);
+    return show(pins_.n);
 }
 
-void IN19A::showMu()
+bool IN19A::showMu()
 {
-    show(pins_.mu);
+    return show(pins_.mu);
 }
 
-void IN19A::showDegreeCelsius()
+bool IN19A::showDegreeCelsius()
 {
-    show(pins_.deg_c);
+    return show(pins_.deg_c);
 }

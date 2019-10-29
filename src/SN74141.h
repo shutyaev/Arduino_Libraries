@@ -44,7 +44,7 @@ public:
     void outputOn8();
     void outputOn9();
     void outputOnNone();
-    void outputOn(uint8_t out);
+    bool outputOn(uint8_t out);
 };
 } // namespace NixieTubeLib
 

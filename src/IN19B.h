@@ -24,14 +24,14 @@ private:
 
 public:
     IN19B(SN74141 *driver, IN19BPins pins);
-    void showS();
-    void showF();
-    void showH();
-    void showV();
-    void showT();
-    void showA();
-    void showOmega();
-    void showHz();
+    bool showS();
+    bool showF();
+    bool showH();
+    bool showV();
+    bool showT();
+    bool showA();
+    bool showOmega();
+    bool showHz();
 };
 } // namespace NixieTubeLib
 

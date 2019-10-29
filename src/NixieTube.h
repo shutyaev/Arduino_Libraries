@@ -14,7 +14,7 @@ private:
 protected:
     const uint8_t kPinNone = -1;
     NixieTube(SN74141 *driver);
-    void show(uint8_t pin);
+    bool show(uint8_t pin);
 
 public:
     void turnOff();

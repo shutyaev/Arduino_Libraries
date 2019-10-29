@@ -7,42 +7,42 @@ IN19V::IN19V(SN74141 *driver, IN19VPins pins) : NixieTube::NixieTube(driver)
     pins_ = pins;
 }
 
-void IN19V::showPi()
+bool IN19V::showPi()
 {
-    show(pins_.pi);
+    return show(pins_.pi);
 }
 
-void IN19V::showA_B()
+bool IN19V::showA_B()
 {
-    show(pins_.a_b);
+    return show(pins_.a_b);
 }
 
-void IN19V::showTilde()
+bool IN19V::showTilde()
 {
-    show(pins_.tilde);
+    return show(pins_.tilde);
 }
 
-void IN19V::showLessThan()
+bool IN19V::showLessThan()
 {
-    show(pins_.less_than);
+    return show(pins_.less_than);
 }
 
-void IN19V::showMinus()
+bool IN19V::showMinus()
 {
-    show(pins_.minus);
+    return show(pins_.minus);
 }
 
-void IN19V::showGreaterThan()
+bool IN19V::showGreaterThan()
 {
-    show(pins_.greater_than);
+    return show(pins_.greater_than);
 }
 
-void IN19V::showPlus()
+bool IN19V::showPlus()
 {
-    show(pins_.plus);
+    return show(pins_.plus);
 }
 
-void IN19V::showDb()
+bool IN19V::showDb()
 {
-    show(pins_.db);
+    return show(pins_.db);
 }

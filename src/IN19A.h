@@ -24,14 +24,14 @@ private:
 
 public:
     IN19A(SN74141 *driver, IN19APins pins);
-    void showPercent();
-    void showM_Majuscule();
-    void showP();
-    void showM_Minuscule();
-    void showK();
-    void showN();
-    void showMu();
-    void showDegreeCelsius();
+    bool showPercent();
+    bool showM_Majuscule();
+    bool showP();
+    bool showM_Minuscule();
+    bool showK();
+    bool showN();
+    bool showMu();
+    bool showDegreeCelsius();
 };
 } // namespace NixieTubeLib
 
