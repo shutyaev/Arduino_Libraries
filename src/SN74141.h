@@ -15,23 +15,17 @@ struct SN74141Pins
 class SN74141
 {
 private:
-    const uint8_t kFunctionTable[11][4] = {
-        {LOW, LOW, LOW, LOW},    // 0
-        {HIGH, LOW, LOW, LOW},   // 1
-        {LOW, HIGH, LOW, LOW},   // 2
-        {HIGH, HIGH, LOW, LOW},  // 3
-        {LOW, LOW, HIGH, LOW},   // 4
-        {HIGH, LOW, HIGH, LOW},  // 5
-        {LOW, HIGH, HIGH, LOW},  // 6
-        {HIGH, HIGH, HIGH, LOW}, // 7
-        {LOW, LOW, LOW, HIGH},   // 8
-        {HIGH, LOW, LOW, HIGH},  // 9
-        {HIGH, HIGH, HIGH, HIGH} // NONE
-    };
+    static const uint8_t kFunctionTable[11][4];
     SN74141Pins pins_;
     void output(uint8_t out);
 
 public:
+    enum OutputOnResult
+    {
+        SUCCESS,
+        UNKNOWN_ERROR,
+        OUT_OF_RANGE
+    };
     SN74141(SN74141Pins pins);
     void outputOn0();
     void outputOn1();
@@ -44,7 +38,7 @@ public:
     void outputOn8();
     void outputOn9();
     void outputOnNone();
-    bool outputOn(uint8_t out);
+    OutputOnResult outputOn(uint8_t out);
 };
 } // namespace NixieTubeLib
 

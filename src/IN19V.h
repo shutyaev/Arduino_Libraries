@@ -24,14 +24,14 @@ private:
 
 public:
     IN19V(SN74141 *driver, IN19VPins pins);
-    bool showPi();
-    bool showA_B();
-    bool showTilde();
-    bool showLessThan();
-    bool showMinus();
-    bool showGreaterThan();
-    bool showPlus();
-    bool showDb();
+    ShowResult showPi();
+    ShowResult showA_B();
+    ShowResult showTilde();
+    ShowResult showLessThan();
+    ShowResult showMinus();
+    ShowResult showGreaterThan();
+    ShowResult showPlus();
+    ShowResult showDb();
 };
 } // namespace NixieTubeLib
 

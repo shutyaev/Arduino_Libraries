@@ -30,18 +30,18 @@ private:
 public:
     IN14(SN74141 *driver);
     IN14(SN74141 *driver, IN14Pins pins);
-    bool showPointLeft();
-    bool show1();
-    bool show2();
-    bool show3();
-    bool show4();
-    bool show5();
-    bool show6();
-    bool show7();
-    bool show8();
-    bool show9();
-    bool show0();
-    bool showPointRight();
+    ShowResult showPointLeft();
+    ShowResult show1();
+    ShowResult show2();
+    ShowResult show3();
+    ShowResult show4();
+    ShowResult show5();
+    ShowResult show6();
+    ShowResult show7();
+    ShowResult show8();
+    ShowResult show9();
+    ShowResult show0();
+    ShowResult showPointRight();
 };
 } // namespace NixieTubeLib
 

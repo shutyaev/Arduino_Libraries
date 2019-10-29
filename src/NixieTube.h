@@ -8,16 +8,23 @@ namespace NixieTubeLib
 {
 class NixieTube
 {
-private:
-    SN74141 *driver_;
+public:
+    enum ShowResult
+    {
+        SUCCESS,
+        UNKNOWN_ERROR,
+        PIN_NOT_CONNECTED,
+        OUT_OF_RANGE
+    };
+    void turnOff();
 
 protected:
-    const uint8_t kPinNone = -1;
+    static const uint8_t kPinNone = -1;
     NixieTube(SN74141 *driver);
-    bool show(uint8_t pin);
+    ShowResult show(uint8_t pin);
 
-public:
-    void turnOff();
+private:
+    SN74141 *driver_;
 };
 } // namespace NixieTubeLib
 

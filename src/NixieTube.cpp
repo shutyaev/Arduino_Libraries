@@ -7,13 +7,22 @@ NixieTube::NixieTube(SN74141 *driver)
     driver_ = driver;
 }
 
-bool NixieTube::show(uint8_t pin)
+NixieTube::ShowResult NixieTube::show(uint8_t pin)
 {
     if (pin == kPinNone)
     {
-        return false; // pin is not connected
+        return PIN_NOT_CONNECTED;
     }
-    return driver_->outputOn(pin);
+    SN74141::OutputOnResult result = driver_->outputOn(pin);
+    switch (result)
+    {
+    case SUCCESS:
+        return SUCCESS;
+    case OUT_OF_RANGE:
+        return OUT_OF_RANGE;
+    default:
+        return UNKNOWN_ERROR;
+    }
 }
 
 void NixieTube::turnOff()
