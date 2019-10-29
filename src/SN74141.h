@@ -20,9 +20,9 @@ private:
 public:
     enum OutputOnResult
     {
-        SUCCESS,
-        UNKNOWN_ERROR,
-        OUT_OF_RANGE
+        kSuccess,
+        kUnknownError,
+        kOutOfRange
     };
     static const uint8_t O0 = 0;
     static const uint8_t O1 = 1;

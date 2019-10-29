@@ -13,17 +13,17 @@ NixieTube::ShowResult NixieTube::show(uint8_t pin)
 {
     if (pin == kPinNone)
     {
-        return PIN_NOT_CONNECTED;
+        return kPinNotConnected;
     }
     SN74141::OutputOnResult result = driver_->outputOn(pin);
     switch (result)
     {
-    case SUCCESS:
-        return SUCCESS;
-    case OUT_OF_RANGE:
-        return OUT_OF_RANGE;
+    case SN74141::OutputOnResult::kSuccess:
+        return kSuccess;
+    case SN74141::OutputOnResult::kOutOfRange:
+        return kOutOfRange;
     default:
-        return UNKNOWN_ERROR;
+        return kUnknownError;
     }
 }
 

@@ -88,8 +88,8 @@ SN74141::OutputOnResult SN74141::outputOn(uint8_t pin)
 {
     if (pin < O0 || pin > O9)
     {
-        return OUT_OF_RANGE;
+        return kOutOfRange;
     }
     output(pin);
-    return SUCCESS;
+    return kSuccess;
 }

@@ -11,10 +11,10 @@ class NixieTube
 public:
     enum ShowResult
     {
-        SUCCESS,
-        UNKNOWN_ERROR,
-        PIN_NOT_CONNECTED,
-        OUT_OF_RANGE
+        kSuccess,
+        kUnknownError,
+        kPinNotConnected,
+        kOutOfRange
     };
     void turnOff();
     void train(unsigned long duration);
