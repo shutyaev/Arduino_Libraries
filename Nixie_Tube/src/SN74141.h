@@ -13,27 +13,27 @@ private:
     static const uint8_t I_C = 2;
     static const uint8_t I_D = 3;
     static const uint8_t O_NONE = 10;
-    static const uint8_t kFunctionTable[11][4];
+    static const uint8_t FUNCTION_TABLE[11][4];
     const uint8_t *pins_;
     void output(uint8_t pin);
 
 public:
     enum OutputOnResult
     {
-        kSuccess,
-        kUnknownError,
-        kOutOfRange
+        SUCCESS,
+        UNKNOWN_ERROR,
+        OUT_OF_RANGE
     };
-    static const uint8_t O0 = 0;
-    static const uint8_t O1 = 1;
-    static const uint8_t O2 = 2;
-    static const uint8_t O3 = 3;
-    static const uint8_t O4 = 4;
-    static const uint8_t O5 = 5;
-    static const uint8_t O6 = 6;
-    static const uint8_t O7 = 7;
-    static const uint8_t O8 = 8;
-    static const uint8_t O9 = 9;
+    static const uint8_t O_0 = 0;
+    static const uint8_t O_1 = 1;
+    static const uint8_t O_2 = 2;
+    static const uint8_t O_3 = 3;
+    static const uint8_t O_4 = 4;
+    static const uint8_t O_5 = 5;
+    static const uint8_t O_6 = 6;
+    static const uint8_t O_7 = 7;
+    static const uint8_t O_8 = 8;
+    static const uint8_t O_9 = 9;
     SN74141(const uint8_t *pins);
     void outputOn0();
     void outputOn1();

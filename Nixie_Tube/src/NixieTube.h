@@ -11,16 +11,16 @@ class NixieTube
 public:
     enum ShowResult
     {
-        kSuccess,
-        kUnknownError,
-        kPinNotConnected,
-        kOutOfRange
+        SUCCESS,
+        UNKNOWN_ERROR,
+        PIN_NOT_CONNECTED,
+        OUT_OF_RANGE
     };
     void turnOff();
     void train(unsigned long duration);
 
 protected:
-    static const uint8_t kPinNone = -1;
+    static const uint8_t PIN_NONE = -1;
     const uint8_t *pins_;
     uint8_t pinCount_;
     NixieTube(SN74141 *driver, const uint8_t *pins, uint8_t pinCount);

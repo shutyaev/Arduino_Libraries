@@ -9,19 +9,19 @@ namespace NixieTubeLib
 class IN14 : public NixieTube
 {
 private:
-    static const uint8_t kPinPL = 0;
-    static const uint8_t kPin1 = 1;
-    static const uint8_t kPin2 = 2;
-    static const uint8_t kPin3 = 3;
-    static const uint8_t kPin4 = 4;
-    static const uint8_t kPin5 = 5;
-    static const uint8_t kPin6 = 6;
-    static const uint8_t kPin7 = 7;
-    static const uint8_t kPin8 = 8;
-    static const uint8_t kPin9 = 9;
-    static const uint8_t kPin0 = 10;
-    static const uint8_t kPinPR = 11;
-    static const uint8_t kDefaultPins[12];
+    static const uint8_t PIN_PL = 0;
+    static const uint8_t PIN_1 = 1;
+    static const uint8_t PIN_2 = 2;
+    static const uint8_t PIN_3 = 3;
+    static const uint8_t PIN_4 = 4;
+    static const uint8_t PIN_5 = 5;
+    static const uint8_t PIN_6 = 6;
+    static const uint8_t PIN_7 = 7;
+    static const uint8_t PIN_8 = 8;
+    static const uint8_t PIN_9 = 9;
+    static const uint8_t PIN_0 = 10;
+    static const uint8_t PIN_PR = 11;
+    static const uint8_t DEFAULT_PINS[12];
 
 public:
     IN14(SN74141 *driver);
