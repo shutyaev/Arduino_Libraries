@@ -9,6 +9,18 @@ namespace NixieTubeLib
 class IN14 : public NixieTube
 {
 private:
+    static const uint8_t kPinPL = 0;
+    static const uint8_t kPin1 = 1;
+    static const uint8_t kPin2 = 2;
+    static const uint8_t kPin3 = 3;
+    static const uint8_t kPin4 = 4;
+    static const uint8_t kPin5 = 5;
+    static const uint8_t kPin6 = 6;
+    static const uint8_t kPin7 = 7;
+    static const uint8_t kPin8 = 8;
+    static const uint8_t kPin9 = 9;
+    static const uint8_t kPin0 = 10;
+    static const uint8_t kPinPR = 11;
     static const uint8_t kDefaultPins[12];
 
 public:
